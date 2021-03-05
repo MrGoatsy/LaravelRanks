@@ -26,6 +26,7 @@
             'rank'      => $rank
         ])->sendEmailVerificationNotification();
 8. Run `php artisan migrate`.
+9. Run `php artisan db:seed -class=RankSeeder`
 
 ## Usage
 
