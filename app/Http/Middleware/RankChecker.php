@@ -16,6 +16,10 @@ class RankChecker {
      * @return mixed
      */
     public function handle(Request $request, Closure $next, ...$ranks) {
+        if (!Auth::check()) {
+            abort(404);
+        }
+
         $userRank = Auth::user()->rank;
         $rankCheck = DB::table('userranks')->whereIn('rankName', $ranks)->select('rankValue', 'rankName')->orderBy('rankValue', 'desc')->get();
 
@@ -25,6 +29,6 @@ class RankChecker {
             }
         }
 
-        return redirect('/');
+        return abort(404);
     }
 }

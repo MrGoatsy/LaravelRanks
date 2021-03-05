@@ -10,7 +10,7 @@
         'rankName'  => 'RankName',
         'rankValue' => RankValue,
         ],
-3. In `app\Http\Kernel.php` add: `'rank' => \App\Http\Middleware\RankChecker::class,` at the bottom.
+3. In `app\Http\Kernel.php` add `'rank' => \App\Http\Middleware\RankChecker::class,` at the bottom of `$routeMiddleware`.
 4. Add `'rank',` to `$fillable` in `user.php`.
 5. Add the following to `user.php`
         public function rank() {
