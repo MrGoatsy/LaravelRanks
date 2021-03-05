@@ -1,4 +1,4 @@
-# Laravel Rank middleware
+# Laravel Custom Rank Middleware
 
 ## Installation
 
