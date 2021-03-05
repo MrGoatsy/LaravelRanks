@@ -5,6 +5,7 @@
 1. Drag all folders inside the `LaravelRanks` folder into the root of your Laravel project
 2. Change the ranks that you want to have in `database\seeders\RankSeeder.php`
 2.1 (Optional) Customize ranks by adding an array and changing `RankName` and `RankValue` to what you want.
+
         [
         'rankName'  => 'RankName',
         'rankValue' => RankValue,
