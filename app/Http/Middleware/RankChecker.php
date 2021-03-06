@@ -17,7 +17,7 @@ class RankChecker {
      */
     public function handle(Request $request, Closure $next, ...$ranks) {
         if (!Auth::check()) {
-            abort(404);
+            abort(401);
         }
 
         $userRank = Auth::user()->rank;
@@ -29,6 +29,6 @@ class RankChecker {
             }
         }
 
-        return abort(404);
+        return abort(403);
     }
 }
